@@ -1,0 +1,56 @@
+name: Bug Report
+description: Report a bug in pollhook
+labels: [bug]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: pollhook version
+      description: Output of `pollhook version`
+      placeholder: "pollhook dev"
+    validations:
+      required: true
+
+  - type: input
+    id: go-version
+    attributes:
+      label: Go version
+      description: Output of `go version`
+      placeholder: "go1.22.0 darwin/arm64"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: command
+    attributes:
+      label: Command
+      description: Which command were you running?
+      options:
+        - serve
+        - test
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What happened? What did you expect?
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: Minimal steps to reproduce the issue
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / error output
+      description: Paste relevant log output (redact any secrets)
+      render: shell
