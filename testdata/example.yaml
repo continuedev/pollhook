@@ -1,0 +1,25 @@
+sources:
+  # Sentry unresolved issues
+  - name: sentry-issues
+    command: |
+      curl -s -H "Authorization: Bearer $SENTRY_TOKEN" \
+        https://sentry.io/api/0/projects/my-org/my-project/issues/?query=is:unresolved
+    interval: 5m
+    items: "."
+    id: "id"
+    webhook:
+      url: https://hub.continue.dev/api/webhooks/ingest/your-workflow-id
+      secret: your-webhook-secret
+
+  # PagerDuty triggered incidents
+  # - name: pagerduty-incidents
+  #   command: |
+  #     curl -s -H "Authorization: Token token=$PD_TOKEN" \
+  #       -H "Content-Type: application/json" \
+  #       "https://api.pagerduty.com/incidents?statuses[]=triggered"
+  #   interval: 2m
+  #   items: "incidents"
+  #   id: "id"
+  #   webhook:
+  #     url: https://hub.continue.dev/api/webhooks/ingest/your-workflow-id
+  #     secret: your-webhook-secret
