@@ -8,6 +8,8 @@
 
 <p align="center">Poll REST APIs, deliver webhooks. Bridge any API into Continue's event system.</p>
 
+<p align="center"><em>An autonomous codebase built by the <a href="https://continue.dev/blueprint">Continue Software Factory</a></em></p>
+
 ---
 
 ## Why?
@@ -139,8 +141,5 @@ See [CONTRIBUTING.md](.github/CONTRIBUTING.md) for development setup and guideli
 
 ## License
 
-[Apache-2.0](LICENSE)
-
----
-
-<p align="center">Built by <a href="https://continue.dev">Continue</a></p>
+Apache-2.0 — see [LICENSE](LICENSE) for details.
+Copyright (c) 2025 Continue Dev, Inc.
